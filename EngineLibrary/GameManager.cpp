@@ -13,10 +13,18 @@ GameManager::GameManager(char *window_name, int typeStartup) {	//start up the ma
 	
 
 	//std::thread t1(&RenderSystem::RenderSystemLoop, m_RenderSystem);
-	m_RenderSystem->RenderSystemLoop(); // start Render Loop
+	//m_RenderSystem->RenderSystemLoop(); // start Render Loop
 	//t1.join();
 	
 }
 GameManager::~GameManager() {	//shut down the manager
 		printf("GameManager finish");
+}
+
+void GameManager::StartUp()
+{
+	std::thread t1(&RenderSystem::RenderSystemLoop, m_RenderSystem);
+	t1.detach();
+	//t1.join();
+	//t1.~thread();
 }

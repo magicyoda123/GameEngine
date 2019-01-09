@@ -10,9 +10,9 @@ int main()
 	char Title[] = "My title";
 	int typeOfGameManager = 1;
 	GameManager* MyGameManager = new GameManager(Title, typeOfGameManager);// game start up
-	
 	// game execute
-	
+
+	MyGameManager->StartUp();
 	MyGameManager->~GameManager(); // game shut down
 
 }

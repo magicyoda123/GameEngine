@@ -1,6 +1,6 @@
 #pragma once
 #include "RenderSystem.h"
-
+#include <stdio.h>
 #ifdef ENGINELIBRARY_EXPORTS
 #define ENGINELIBRARY_API __declspec(dllexport)
 #else
@@ -59,8 +59,9 @@ void RenderSystem::removeObject(__int32 objectId) { // remove data from the scen
 
 }
 
-void RenderSystem::RenderSystemLoop(){ // Render Loop
-		/* Loop until the user closes the window */
+void RenderSystem::RenderSystemLoop(){ 
+	// Render Loop
+	// Loop until the user closes the window 
 	while (!glfwWindowShouldClose(m_window))
 	{
 
@@ -79,17 +80,15 @@ void RenderSystem::RenderSystemLoop(){ // Render Loop
 		// Set up IMGUI Render
 		ImGui::Render();
 
-		/* Render here */
+		// Render here
 		glClearColor(1, 1, 1, 1);
 		glClear(GL_COLOR_BUFFER_BIT);
 
-		/*
-			Get from the stack renderable data
-		*/
+		//	Get from the stack renderable data
 
 		ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 
-		/* Swap front and back buffers */
+		// Swap front and back buffers
 		glfwMakeContextCurrent(m_window);
 		glfwSwapBuffers(m_window);
 
@@ -98,6 +97,9 @@ void RenderSystem::RenderSystemLoop(){ // Render Loop
 	ImGui_ImplOpenGL3_Shutdown();
 	ImGui_ImplGlfw_Shutdown();
 	ImGui::DestroyContext();
+	printf("\n I am done!");
 
+//	while(1)
+//	printf("a!\n");
 }
 

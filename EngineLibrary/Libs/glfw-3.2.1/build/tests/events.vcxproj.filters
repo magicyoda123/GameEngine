@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Филипп\source\repos\EngineLibrary\EngineLibrary\Libs\glfw-3.2.1\tests\events.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Филипп\source\repos\EngineLibrary\EngineLibrary\Libs\glfw-3.2.1\deps\getopt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Филипп\source\repos\EngineLibrary\EngineLibrary\Libs\glfw-3.2.1\deps\glad.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\Филипп\source\repos\EngineLibrary\EngineLibrary\Libs\glfw-3.2.1\deps\getopt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Филипп\source\repos\EngineLibrary\EngineLibrary\Libs\glfw-3.2.1\deps\glad\glad.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Филипп\source\repos\EngineLibrary\EngineLibrary\Libs\glfw-3.2.1\tests\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{345E4E25-F4DE-369D-9DD3-FDCB901F548C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{2AE13868-D0AE-35F2-8EC1-1EFEA6DC8BB6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

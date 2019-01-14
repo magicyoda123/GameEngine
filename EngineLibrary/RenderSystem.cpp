@@ -59,12 +59,12 @@ void RenderSystem::removeObject(__int32 objectId) { // remove data from the scen
 
 }
 
-void RenderSystem::RenderSystemLoop(){ 
+void RenderSystem::RenderSystemLoop(int* mutex){ 
 	// Render Loop
 	// Loop until the user closes the window 
 	while (!glfwWindowShouldClose(m_window))
 	{
-
+		*mutex = 1;
 		// Setup Style
 		ImGui::StyleColorsDark();
 		bool show_demo_window = true;
@@ -100,6 +100,6 @@ void RenderSystem::RenderSystemLoop(){
 	printf("\n I am done!");
 
 //	while(1)
-//	printf("a!\n");
+	printf("a!\n");
 }
 

@@ -8,7 +8,6 @@
 
 GameManager::GameManager(char *window_name, int typeStartup) {	//start up the manager
 	printf("GameManager starts...");
-
 	m_RenderSystem = new RenderSystem(window_name, typeStartup); // set up Render System
 	
 
@@ -21,9 +20,9 @@ GameManager::~GameManager() {	//shut down the manager
 		printf("GameManager finish");
 }
 
-void GameManager::StartUp()
+void GameManager::StartUp(int* mutex)
 {
-	std::thread t1(&RenderSystem::RenderSystemLoop, m_RenderSystem);
+	std::thread t1(&RenderSystem::RenderSystemLoop, m_RenderSystem, mutex);
 	t1.detach();
 	//t1.join();
 	//t1.~thread();

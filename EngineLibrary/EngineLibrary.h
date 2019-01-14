@@ -15,7 +15,6 @@ class ENGINELIBRARY_API GameManager {
 	public:
 		GameManager(char *window_name, int typeStartup);	//start up the manager
 		~GameManager();	//shut down the manager
-		void StartUp();
+		void StartUp(int* mutex);
 		RenderSystem* m_RenderSystem; // render system for game manager
-
 };

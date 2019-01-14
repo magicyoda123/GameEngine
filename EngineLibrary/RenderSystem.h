@@ -25,7 +25,7 @@ public:
 	// typeStartup - type of the Application
 	__int32 addObject(); // add data to the scene; returns objeect id in RenderSystem
 	void removeObject(__int32 objectId);  // remove data from the scene
-	void RenderSystemLoop(); // Render Loop o the Aplication
+	void RenderSystemLoop(int *mutex); // Render Loop o the Aplication
 	~RenderSystem();// destructor of the Render System
 	GLFWwindow* m_window; // Window of the Application
 

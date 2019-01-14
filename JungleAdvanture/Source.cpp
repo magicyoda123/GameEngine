@@ -7,12 +7,17 @@
 
 int main()
 {
+	int mutex = 0;
 	char Title[] = "My title";
 	int typeOfGameManager = 1;
 	GameManager* MyGameManager = new GameManager(Title, typeOfGameManager);// game start up
 	// game execute
 
-	MyGameManager->StartUp();
-	MyGameManager->~GameManager(); // game shut down
+	MyGameManager->StartUp(&mutex);
+	while (mutex != 0)
+	{
+		printf("threads working without out from main\n");
+	}
+	//MyGameManager->~GameManager(); // game shut down
 
 }
